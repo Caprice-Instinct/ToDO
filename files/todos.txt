@@ -1,0 +1,9 @@
+shower
+kneed
+Fry
+fly a plane
+exit
+Cook Lunch
+Call
+Hungry
+CallGo runningFry chicken

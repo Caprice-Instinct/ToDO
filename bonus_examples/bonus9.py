@@ -1,10 +1,10 @@
 password = input("Enter password: ")
-result = []
+result = {}
 
 if len(password) >= 8:
-    result.append(True)
+    result["Length"] = True
 else:
-    result.append(False)
+    result["Length"] = False
 
 digit = False
 upper = False
@@ -14,10 +14,11 @@ for i in password:
 
     if i.isupper():
         upper = True
-result.append(digit)
-result.append(upper)
 
-if all(result) == True:
+result["digit"] = digit
+result["upper"] = upper
+
+if all(result.values()):
     print("Strong password")
 else:
     print("Weak password!")

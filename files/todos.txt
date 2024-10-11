@@ -2,8 +2,10 @@ shower
 kneed
 Fry
 fly a plane
-exit
 Cook Lunch
-Call
-Hungry
-CallGo runningFry chicken
+call mom
+Trim grass
+Shopping
+Play ball
+Buy flowers
+plant the new flowers

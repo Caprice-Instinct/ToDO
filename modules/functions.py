@@ -12,3 +12,5 @@ def write_todos(todos_local, filepath="todos.txt"):
         file.writelines(todos_local)
 
 
+if __name__ == "__main__":
+    print(get_todos("../todos.txt"))

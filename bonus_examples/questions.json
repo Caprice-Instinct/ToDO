@@ -1,0 +1,9 @@
+[{"question_text":"What are dolphins?",
+  "alts":["Amphibians","Fish","Mammals","Birds"],
+  "correct_answer": 3},
+{"question_text":"Which one is liquid?",
+  "alts":["Rock","Milk","Air"],
+  "correct_answer": 2},
+{"question_text":"Who was Kenya's first president?",
+  "alts":["Kenyatta","Kibaki","Wajackoyah","Stivosimpleboy"],
+  "correct_answer": 1}]

@@ -1,14 +1,11 @@
-def get_todos(filepath="todos.txt"):
-    with open(filepath, 'r') as file:
-        todos_local = file.readlines()
-    return todos_local
+# from modules.functions import get_todos, write_todos
+from time import strftime
 
+from modules import functions
+import time
 
-def write_todos(todos_local, filepath="todos.txt"):
-    with open(filepath, 'w') as file:
-        file.writelines(todos_local)
-
-
+now = time.strftime("%Y-%m-%d %H:%M:%S %A")
+print("It is", now)
 while True:
     # Get user input and strip space chars
     user_action = input('Type add, show, edit, complete or exit: ')
@@ -17,14 +14,14 @@ while True:
     if user_action.startswith('add'):
         todo = user_action[4:]
 
-        todos = get_todos()
+        todos = functions.get_todos()
 
         todos.append(todo.strip(' ').capitalize() + '\n')
 
-        write_todos(todos)
+        functions.write_todos(todos)
 
     elif user_action.startswith('show'):
-        todos = get_todos()
+        todos = functions.get_todos()
 
         # new_todos = [item.strip("\n") for item in todos]
 
@@ -35,13 +32,13 @@ while True:
         try:
             number = int(user_action[5:])
 
-            todos = get_todos()
+            todos = functions.get_todos()
 
             new_todo = input("Enter a new edited todo: ")
             todos[number - 1] = new_todo + '\n'
             # todos.__setitem__(number, new_todo)
 
-            write_todos(todos)
+            functions.write_todos(todos)
 
         except ValueError:
             print('Your command is invalid.')
@@ -50,13 +47,13 @@ while True:
     elif user_action.startswith('complete'):
         try:
             number = int(user_action[9:])
-            todos = get_todos()
+            todos = functions.get_todos()
 
             index = number - 1
             completed_todo = todos[index].strip('\n')
             todos.pop(index)
 
-            write_todos(todos)
+            functions.write_todos(todos)
 
             message = f"Todo {completed_todo} was completed and removed from the list."
             print(message)

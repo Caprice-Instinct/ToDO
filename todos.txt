@@ -1,4 +1,3 @@
-shower
 Fry
 fly a plane
 Cook Lunch
@@ -8,3 +7,4 @@ Buy lilies
 Plant lilies
 Give speech
 Call siblings
+Give back to charity

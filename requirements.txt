@@ -1,1 +1,2 @@
-FreeSimpleGUI
+FreeSimpleGUI~=5.1.1
+streamlit~=1.39.0
